@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unit converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Merriweather:ital@1&family=Playball&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="unit-container">
+        <header>
+            <h1>Unit Converter</h1>
+        </header>
+        <form>
+            <input type="number" id="input-text" value="">
+            <div class="selector">
+                <select name="table1" class="unit" id="unit-change">
+                    <option value="meter">Meter</option>
+                    <option value="kilometer">Kilometer</option>
+                    <option value="millimeter">Millimeter</option>
+                    <option value="mile">mile</option>
+                    <option value="Centimeter">Centimeter</option>
+                </select>
+
+                <select name="table2" class="unit" id="unit-converter">
+                    <option value="Kilometer">Kilometer</option>
+                    <option value="meter">Meter</option>
+                    <option value="millimeter">Millimeter</option>
+                    <option value="mile">Mile</option>
+                    <option value="Centimeter">Centimeter</option>
+                </select>
+            </div>
+        </form>
+        <section class="calculate">
+            <div class="result">
+                <p>Result:<span id="outputresult"></span></p>
+            </div>
+
+            <div class="convert">
+                <ul>Centimeter =><span id = centimeter></span></ul>
+                <ul>Millimeter =><span id = "millimeter"></span></ul>
+                <ul>Micrometer =><span id = "micrometer"></span></ul>
+            </div>
+
+            <footer>
+                <p>@2022 powered by justman</p>
+            </footer>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
