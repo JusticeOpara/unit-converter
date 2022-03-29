@@ -37,9 +37,9 @@ function myResult() {
 
   /* changing the options in the unit-change and the options in the unit-converter and 
     return the value in the result as the change.*/
-  if (firstUnit === "meter") {
 
     let valueResult;
+  if (firstUnit === "meter") {
 
     switch (secUnit) {
       case 'kilometer':
@@ -49,7 +49,7 @@ function myResult() {
 
       case 'millimeter':
         valueResult = amountVal / 0.001;
-        console.log(valueResult, "meter to milimeter");
+        console.log(valueResult,"meter to millimeter");
         break;
 
       case 'mile':
@@ -63,16 +63,14 @@ function myResult() {
         break;
       default:
         console.log("No value found");
-    }
+    };
 
-    console.log(valueResult, "RESULT OF VALUE")
-  }
+    
+  };
 
 
 
   if (firstUnit === "kilometer") {
-
-    let valueResult;
 
     switch (secUnit) {
       case 'meter':
@@ -96,15 +94,12 @@ function myResult() {
         break;
       default:
         console.log("No value found");
-    }
-    console.log(valueResult, "RESULT OF VALUE")
-  }
-
+    };
+    
+  };
 
 
   if (firstUnit === "millimeter") {
-
-    let valueResult;
 
     switch (secUnit) {
       case 'meter':
@@ -128,15 +123,12 @@ function myResult() {
         break;
       default:
         console.log("No value found");
-    }
-    console.log(valueResult, "RESULT OF VALUE")
-  }
+    };
+  };
 
 
 
   if (firstUnit === "mile") {
-
-    let valueResult;
 
     switch (secUnit) {
       case 'meter':
@@ -160,15 +152,13 @@ function myResult() {
         break;
       default:
         console.log("No value found");
-    }
-    console.log(valueResult, "RESULT OF VALUE")
-  }
+    };
+    
+  };
 
 
 
   if (firstUnit === "centimeter") {
-
-    let valueResult = inputText.value;
 
     switch (secUnit) {
       case 'meter':
@@ -192,16 +182,15 @@ function myResult() {
         break;
       default:
         console.log("No value found");
-    }
-
-    console.log(valueResult, "RESULT OF VALUE");
-    
+    };
   };
 
   
+let secondResultValue = valueResult;
+console.log(secondResultValue,"SECOND RESULT VALUE")
 
   /* Getting the result value */
-  result.innerText = `${amountVal} ${firstSelectedBtn.value}  =  ${exchangeVal} ${secondSelectBtn.value} `;
+  result.innerText = `${amountVal} ${firstSelectedBtn.value}  =  ${secondResultValue} ${secondSelectBtn.value} `;
 
 
 
@@ -229,7 +218,7 @@ function myResult() {
 
 
   selectedValue = (amountVal * 1000)
-  console.log(selectedValue, "micrometer")
+  console.log(selectedValue, "micrometer");
   function separator(selectedValued) {
     var str = selectedValue.toString().split(".");
     str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
