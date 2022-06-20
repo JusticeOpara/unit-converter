@@ -7,55 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unit_converter</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
 
     <div class="unit-container">
         <div class="inner-container">
-            
-                <h1 class="header">Convert Your Units Easily</h1>
-        
-            <form>
-                
-                <input type="number" id="input-text" value="">
+            <!-- <div> -->
+            <h1 class="header">Convert Your Units Easily</h1>
 
-                <div class="selector">
-                    <select name="table1" class="unit-switcher" id="unit-change">
-                        <option value="meter">Meter</option>
-                        <option value="kilometer">Kilometer</option>
-                        <option value="millimeter">Millimeter</option>
-                        <option value="mile">mile</option>
-                        <option value="centimeter">Centimeter</option>
-                    </select>
+            <input type="number" id="input-text" value="">
 
-                    <select name="table2" class="unit-switcher" id="unit-converter">
-                        <option value="kilometer">Kilometer</option>
-                        <option value="meter">Meter</option>
-                        <option value="millimeter">Millimeter</option>
-                        <option value="mile">Mile</option>
-                        <option value="centimeter">Centimeter</option>
-                    </select>
-                    
-                
-                </div>
-                <ul class="result">Result : <span id="outputresult"></span></ul>
-                
-            </form>
+            <!-- </div> -->
+            <div class="selector">
 
-            <section class="calculate">
+                <select name="table1" class="unit-switcher" id="unit-change">
+                    <option value="meter">Meter</option>
+                    <option value="kilometer">Kilometer</option>
+                    <option value="millimeter">Millimeter</option>
+                    <option value="mile">mile</option>
+                    <option value="centimeter">Centimeter</option>
+                </select>
 
-                <div class="convert">
-                    <ul>Centimeter =><span id=centimeter></span></ul>
-                    <ul>Millimeter =><span id="millimeter"></span></ul>
-                    <ul>Micrometer =><span id="micrometer"></span></ul>
-                </div>
+                <select name="table2" class="unit-switcher" id="unit-converter">
+                    <option value="kilometer">Kilometer</option>
+                    <option value="meter">Meter</option>
+                    <option value="millimeter">Millimeter</option>
+                    <option value="mile">Mile</option>
+                    <option value="centimeter">Centimeter</option>
+                </select>
 
-                <footer>
-                    <p class="footer">Powered by : Just😝man 2022</a> </p>
-                </footer>
-            </section>
+            </div>
+
+            <div>
+                <p class="result">Result : <span id="outputresult"></span></p>
+            </div>
+
+            <div class="convert">
+                <p>Centimeter =<span id=centimeter></span></p>
+                <p>Millimeter =<span id="millimeter"></span></p>
+                <p>Micrometer =<span id="micrometer"></span></p>
+            </div>
+
+            <div class="bottom-line">
+                <p class="footer">Powered by : <a href="https://github.com/JusticeOpara/unit-converter">Justino</a></p>
+            </div>
+
         </div>
     </div>
     <script src="app.js"></script>

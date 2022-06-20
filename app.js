@@ -7,28 +7,35 @@ const convertingToMillimeter = document.getElementById("millimeter");
 const convertingToMicrometer = document.getElementById("micrometer");
 
 // Taking the intial value
-console.log(firstSelectedBtn.value, "change")
-console.log(secondSelectBtn.value, "converter")
+console.log(firstSelectedBtn[0].value, "change")
+console.log(secondSelectBtn.option, "converter")
 
 inputText.addEventListener("keyup", myResult);
 firstSelectedBtn.addEventListener("change", myResult);
 secondSelectBtn.addEventListener("change", myResult);
 
-// selectElement('leaveCode', '11')
+const defaultFirstSelectedBtn = firstSelectedBtn.value;
 
-// function selectElement(id, valueToSelect) {    
-//     // let element = document.getElementById(unit);
-//     firstSelectedBtn.value = valueToSelect;
-// }
+const defaultSecondSelectedBtn = secondSelectBtn.value;
 
-
-
-// var select = document.getElementById('<your select element id>');
-
-
-// select.value = "";
 
 function myResult() {
+
+  firstSelectedBtn.options[2].selected = true;
+
+  console.log(firstSelectedBtn.value, "FIRST-SELECTED-BUTTON");
+
+  console.log(secondSelectBtn.value, "SECOND-SELECTED-BUTTON");
+
+
+
+  // if (firstSelectedBtn.value == secondSelectBtn.value) {
+  console.log(defaultFirstSelectedBtn, "for the first selected btn");
+
+  console.log(defaultSecondSelectedBtn, "for the second selected btn");
+
+
+  // }
 
   let amountVal = inputText.value;
   console.log(amountVal, "changeuy");
@@ -204,10 +211,12 @@ function myResult() {
         console.log("No value found");
     }
     console.log(valueResult, "RESULT OF VALUE");
-    
+
   };
 
-  
+  firstSelectedBtn.value = "meter";
+
+  // $('#startTime option[value=17:00:00]').prop('selected', true);
 
   /* Getting the result value */
   result.innerText = `${amountVal} ${firstSelectedBtn.value}   =  ${exchangeVal} ${secondSelectBtn.value} `;
@@ -225,7 +234,7 @@ function myResult() {
     return str.join(".");
   }
   convertingToCentimeter.innerText = separator(selectedValue);
-  
+
 
   selectedValue = (amountVal * 1000.000);
   console.log(selectedValue, "millimeter");
